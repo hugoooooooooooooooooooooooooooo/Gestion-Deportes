@@ -1,10 +1,7 @@
 Options +FollowSymLinks
-RewriteEngine Options
-
+RewriteEngine On
 
 RewriteRule ^datos$ datos.php
 RewriteRule ^detalles$ detalles.php
 RewriteRule ^alta$ introducir.php
-RewriteRule ^login$ login.php
-RewriteRule ^logout$ logout.php
 RewriteRule ^menu$ menu.php
