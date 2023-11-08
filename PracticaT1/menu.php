@@ -8,10 +8,10 @@ if (!isset($_SESSION['ID'])) {
 
 include 'conn.php';
 
-$ID = $_SESSION['ID']; // Debes asignar $_SESSION['ID'] a una variable $ID
+$ID = $_SESSION['ID'];
 
-$stmt = $con->prepare('SELECT ROL FROM usuarios WHERE ID = :ID'); // Cambia $_SESSION['ID'] a :ID
-$stmt->bindParam(':ID', $ID); // Bind el valor de $ID
+$stmt = $con->prepare('SELECT ROL FROM usuarios WHERE ID = :ID');
+$stmt->bindParam(':ID', $ID);
 $stmt->execute();
 $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
